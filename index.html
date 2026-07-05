@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<!-- saved from url=(0100)file:///C:/Users/abiga.EDGAR-B.000/OneDrive/ferdinand%20webs/braided_elegancy%20final%20to%20be.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Braided Elegancy | Premium Hair Artistry</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+  --gold:#C9A84C; --gold-light:#E8D5A3; --gold-dark:#8B6914;
+  --ebony:#1A1209; --charcoal:#2E2416; --warm:#FAF7F2;
+  --cream:#F2EBE0; --muted:#8A7B68; --text:#3A2E22;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',Arial,sans-serif;background:var(--warm);color:var(--text);overflow-x:hidden;}
+
+/* ===== NAV ===== */
+nav{
+  position:fixed;top:0;width:100%;z-index:999;
+  background:rgba(26,18,9,0.97);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;height:68px;
+  border-bottom:1px solid rgba(201,168,76,0.25);
+}
+.logo{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;color:var(--gold);font-style:italic;}
+.logo span{color:#fff;font-style:normal;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:rgba(255,255,255,0.72);text-decoration:none;font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;transition:color 0.3s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-btn{
+  background:var(--gold);color:var(--ebony);border:none;cursor:pointer;
+  font-family:'Poppins',sans-serif;font-size:0.76rem;font-weight:600;
+  letter-spacing:0.12em;text-transform:uppercase;padding:10px 22px;transition:background 0.3s;
+}
+.nav-btn:hover{background:var(--gold-light);}
+.hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--gold);}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(26,18,9,0.98);padding:1.5rem 5%;z-index:998;}
+.mobile-menu a{display:block;color:rgba(255,255,255,0.8);text-decoration:none;padding:0.8rem 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.9rem;letter-spacing:0.1em;}
+
+/* ===== HERO ===== */
+#home{
+  min-height:100vh;padding:68px 5% 0;
+  background:linear-gradient(135deg,#1A1209 0%,#2C1F0E 55%,#3D2B0F 100%);
+  display:flex;align-items:center;position:relative;overflow:hidden;
+}
+.hero-glow{position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(ellipse at 80% 50%,rgba(201,168,76,0.1) 0%,transparent 65%);pointer-events:none;}
+.hero-content{position:relative;z-index:2;max-width:600px;}
+.hero-tag{font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:12px;}
+.hero-tag::after{content:'';display:block;width:36px;height:1px;background:var(--gold);}
+.hero-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(3rem,6vw,5.2rem);color:#FAF7F2;line-height:1.05;font-weight:400;margin-bottom:0.3rem;}
+.hero-title em{display:block;font-style:italic;color:var(--gold);}
+.hero-sub{color:rgba(255,255,255,0.5);font-size:0.95rem;line-height:1.8;margin:1.5rem 0 2.5rem;max-width:420px;font-weight:300;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-gold{background:var(--gold);color:var(--ebony);border:none;cursor:pointer;font-family:'Poppins',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:15px 32px;transition:all 0.3s;text-decoration:none;display:inline-block;}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:rgba(255,255,255,0.78);border:1px solid rgba(255,255,255,0.22);cursor:pointer;font-family:'Poppins',sans-serif;font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;padding:15px 32px;transition:all 0.3s;text-decoration:none;display:inline-block;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+.hero-stats{position:absolute;bottom:50px;right:5%;display:flex;gap:3rem;z-index:2;}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--gold);font-weight:400;line-height:1;}
+.stat-lbl{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:4px;}
+
+/* ===== TICKER ===== */
+.ticker{background:var(--gold);padding:11px 0;overflow:hidden;}
+.ticker-track{display:flex;gap:3rem;animation:ticker 20s linear infinite;white-space:nowrap;}
+.ticker-item{font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ebony);font-weight:600;display:flex;align-items:center;gap:1rem;}
+.ticker-item::after{content:'◆';font-size:0.45rem;opacity:0.5;}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ===== SHARED SECTION ===== */
+section{padding:90px 5%;}
+.sec-tag{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.sec-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;color:var(--text);margin-bottom:0.8rem;}
+.sec-title em{font-style:italic;color:var(--gold-dark);}
+.divider{width:55px;height:2px;background:linear-gradient(to right,var(--gold),transparent);margin:1.2rem 0 2.5rem;}
+
+/* ===== SERVICES ===== */
+#services{background:var(--cream);}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:2px;margin-top:2.5rem;}
+.svc-card{background:var(--warm);padding:2.2rem;transition:all 0.4s;position:relative;overflow:hidden;cursor:default;}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--gold);transition:width 0.4s;}
+.svc-card:hover{background:var(--ebony);}
+.svc-card:hover .svc-name{color:var(--gold);}
+.svc-card:hover .svc-desc{color:rgba(255,255,255,0.55);}
+.svc-card:hover .svc-price{color:rgba(255,255,255,0.35);}
+.svc-card:hover::after{width:100%;}
+.svc-icon{font-size:1.9rem;margin-bottom:1rem;display:block;}
+.svc-name{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--text);margin-bottom:0.5rem;transition:color 0.4s;}
+.svc-desc{font-size:0.84rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;transition:color 0.4s;font-weight:300;}
+.svc-price{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);font-weight:500;transition:color 0.4s;}
+
+/* Gallery featured row */
+.feat-row{display:grid;grid-template-columns:2fr 1fr;gap:6px;margin-top:2rem;height:520px;}
+.feat-col{display:flex;flex-direction:column;gap:6px;}
+.feat-cell{position:relative;overflow:hidden;}
+.feat-large{height:100%;}
+.feat-half{flex:1;}
+.feat-cell img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;display:block;}
+.feat-cell:hover img{transform:scale(1.04);}
+.feat-overlay{position:absolute;inset:0;background:rgba(26,18,9,0);transition:background 0.3s;}
+.feat-cell:hover .feat-overlay{background:rgba(26,18,9,0.25);}
+@media(max-width:620px){.feat-row{grid-template-columns:1fr;height:auto;}.feat-large{height:280px;}.feat-half{height:180px;}}
+.price-group{max-width:680px;margin:0 auto 2.5rem;}
+.price-cat{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;color:var(--gold-dark);font-weight:400;margin-bottom:1rem;border-bottom:1px solid rgba(201,168,76,0.25);padding-bottom:0.6rem;}
+.price-rows{display:flex;flex-direction:column;gap:0.7rem;}
+.price-row{display:flex;align-items:baseline;gap:8px;font-size:0.92rem;color:var(--text);}
+.price-row .dots{flex:1;border-bottom:1px dotted rgba(58,46,34,0.35);margin-bottom:4px;}
+.price-row .amt{font-weight:600;color:var(--gold-dark);white-space:nowrap;}
+.price-note{max-width:680px;margin:0 auto;text-align:center;font-size:0.78rem;color:var(--muted);font-weight:300;font-style:italic;}
+@media(max-width:600px){.price-cat{font-size:1.3rem;}.price-row{font-size:0.85rem;}}
+
+/* ===== GALLERY ===== */
+#gallery{background:var(--ebony);}
+#gallery .sec-title{color:#FAF7F2;}
+.gallery-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2rem;}
+.gallery-intro{color:rgba(255,255,255,0.45);font-size:0.88rem;line-height:1.8;max-width:440px;font-weight:300;}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:2rem;}
+.g-cell{background:var(--charcoal);position:relative;overflow:hidden;cursor:pointer;aspect-ratio:3/4;}
+.g-cell:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;min-height:300px;}
+.g-cell img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
+.g-cell:hover img{transform:scale(1.06);}
+.g-ph{width:100%;height:100%;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:rgba(255,255,255,0.2);gap:0.4rem;font-size:0.72rem;letter-spacing:0.1em;}
+.g-ph-ico{font-size:1.8rem;opacity:0.25;}
+.g-overlay{position:absolute;inset:0;background:transparent;display:flex;align-items:center;justify-content:center;transition:background 0.3s;}
+.g-cell:hover .g-overlay{background:rgba(26,18,9,0.45);}
+.g-overlay span{color:var(--gold);font-size:1.4rem;opacity:0;transform:scale(0.8);transition:all 0.3s;}
+.g-cell:hover .g-overlay span{opacity:1;transform:scale(1);}
+
+/* Upload */
+.g-cell{aspect-ratio:1;overflow:hidden;background:var(--charcoal);}
+.g-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s;}
+.g-cell:hover img{transform:scale(1.06);}
+
+/* ===== ABOUT / CEO ===== */
+#about{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.about-left{position:relative;}
+.ceo-frame{background:var(--cream);aspect-ratio:3/4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.8rem;position:relative;overflow:hidden;}
+.ceo-frame img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+.ceo-ph{color:var(--muted);font-size:0.78rem;letter-spacing:0.1em;text-align:center;position:relative;z-index:1;}
+.ceo-ph-ico{font-size:3rem;opacity:0.28;display:block;margin-bottom:0.4rem;}
+.ceo-upload{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--ebony);font-family:'Poppins',sans-serif;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;padding:9px 18px;border:none;cursor:pointer;z-index:2;white-space:nowrap;}
+.ceo-upload input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;}
+.acc1{position:absolute;top:-16px;right:-16px;width:100px;height:100px;border:1px solid rgba(201,168,76,0.2);pointer-events:none;}
+.acc2{position:absolute;bottom:-16px;left:-16px;width:70px;height:70px;background:var(--gold);opacity:0.1;pointer-events:none;}
+.ceo-name{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--text);margin:1.2rem 0 0.2rem;}
+.ceo-role{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dark);font-weight:500;}
+.about-body{font-size:0.92rem;color:var(--muted);line-height:1.9;font-weight:300;margin:1.8rem 0;}
+.about-sig{font-family:'Playfair Display',serif;font-size:1.7rem;font-style:italic;color:var(--gold-dark);opacity:0.65;}
+
+/* ===== TESTIMONIALS ===== */
+#testimonials{background:var(--cream);}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-top:2.5rem;}
+.testi-card{background:var(--warm);padding:1.8rem;position:relative;}
+.testi-q{font-family:'Playfair Display',serif;font-size:3.5rem;line-height:0.8;color:var(--gold);opacity:0.25;position:absolute;top:0.8rem;left:1.2rem;}
+.testi-txt{font-size:0.88rem;line-height:1.8;color:var(--muted);font-weight:300;font-style:italic;margin-top:1.4rem;}
+.testi-author{display:flex;align-items:center;gap:0.9rem;margin-top:1.4rem;}
+.testi-av{width:42px;height:42px;background:var(--gold-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold-dark);}
+.testi-nm{font-weight:500;font-size:0.85rem;color:var(--text);}
+.testi-stars{color:var(--gold);font-size:0.68rem;margin-top:2px;letter-spacing:2px;}
+
+/* ===== CONTACT ===== */
+#contact{background:var(--ebony);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+#contact .sec-title{color:#FAF7F2;}
+.c-info-item{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.8rem;}
+.c-ico{width:42px;height:42px;flex-shrink:0;border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;font-size:0.95rem;color:var(--gold);}
+.c-lbl{font-size:0.67rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:3px;}
+.c-val{font-size:0.9rem;color:rgba(255,255,255,0.72);font-weight:300;}
+.social-row{display:flex;gap:0.8rem;margin-top:2.5rem;}
+.soc-btn{width:42px;height:42px;border:1px solid rgba(201,168,76,0.22);background:transparent;color:rgba(255,255,255,0.45);cursor:pointer;font-size:0.78rem;display:flex;align-items:center;justify-content:center;transition:all 0.3s;text-decoration:none;font-family:'Poppins',sans-serif;font-weight:500;}
+.soc-btn:hover{border-color:var(--gold);color:var(--gold);}
+.form-group{margin-bottom:1.1rem;}
+.form-group label{display:block;font-size:0.67rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.38);margin-bottom:7px;}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);color:rgba(255,255,255,0.78);padding:13px 14px;font-family:'Poppins',sans-serif;font-size:0.86rem;font-weight:300;outline:none;transition:border 0.3s;-webkit-appearance:none;border-radius:0;}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:rgba(201,168,76,0.5);}
+.form-group textarea{resize:vertical;min-height:110px;}
+.form-group select option{background:#2E2416;}
+.form-group select optgroup{background:#2E2416;color:#C9A84C;font-style:normal;font-weight:600;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.submit-btn{width:100%;background:var(--gold);border:none;cursor:pointer;font-family:'Poppins',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ebony);padding:16px;transition:all 0.3s;margin-top:0.5rem;}
+.submit-btn:hover{background:var(--gold-light);}
+.form-ok{background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);padding:0.9rem 1.2rem;color:var(--gold);font-size:0.84rem;display:none;margin-top:0.8rem;text-align:center;}
+
+/* ===== FOOTER ===== */
+footer{background:#0E0904;padding:55px 5% 28px;}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,0.06);}
+.footer-brand{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--gold);font-style:italic;margin-bottom:0.7rem;}
+.footer-tag{color:rgba(255,255,255,0.28);font-size:0.8rem;line-height:1.7;font-weight:300;}
+.f-col-title{font-size:0.67rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:1rem;font-weight:500;}
+.f-links{list-style:none;}
+.f-links li{margin-bottom:0.5rem;}
+.f-links a{color:rgba(255,255,255,0.28);text-decoration:none;font-size:0.82rem;font-weight:300;transition:color 0.3s;}
+.f-links a:hover{color:var(--gold);}
+.f-hours{color:rgba(255,255,255,0.28);font-size:0.8rem;line-height:1.9;font-weight:300;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.8rem;flex-wrap:wrap;gap:0.8rem;}
+.footer-copy{color:rgba(255,255,255,0.18);font-size:0.75rem;}
+.footer-copy span{color:var(--gold);}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:950px){
+  #about{grid-template-columns:1fr;gap:2.5rem;}
+  #contact{grid-template-columns:1fr;gap:2.5rem;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  .g-cell:first-child{grid-column:span 2;}
+  .hero-stats{bottom:20px;gap:2rem;}
+}
+@media(max-width:620px){
+  nav{padding:0 4%;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .hero-stats{flex-wrap:wrap;gap:1.5rem;}
+  .gallery-grid{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  section{padding:70px 4%;}
+}
+
+/* ===== ANIMATIONS ===== */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade-up.vis{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="logo">Braided <span>Elegancy</span></div>
+  <ul class="nav-links">
+    <li><a href="#home" style="">Home</a></li>
+    <li><a href="#services" style="color: rgb(201, 168, 76);">Services</a></li>
+    <li><a href="#gallery" style="">Gallery</a></li>
+    <li><a href="#about" style="">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-btn" onclick="scrollTo(&#39;contact&#39;)">Book Now</button>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMenu()">Home</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#gallery" onclick="closeMenu()">Gallery</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#contact" onclick="closeMenu()">Contact &amp; Book</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="home">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Where Beauty Meets Confidence</div>
+    <h1 class="hero-title">
+      Where Every Strand
+      <em>Tells a Story</em>
+    </h1>
+    <p class="hero-sub">Where beauty meets confidence. Premium braided hairstyles delivered with exceptional care, at the comfort of your home.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-gold">Explore Services</a>
+      <a href="#contact" class="btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div><div class="stat-num">8+</div><div class="stat-lbl">Years Experience</div></div>
+    <div><div class="stat-num">1,200+</div><div class="stat-lbl">Happy Clients</div></div>
+    <div><div class="stat-num">40+</div><div class="stat-lbl">Styles Offered</div></div>
+  </div>
+</section>
+
+<!-- ===== TICKER ===== -->
+<div class="ticker">
+  <div class="ticker-track">
+    <div class="ticker-item">Box Braids</div>
+    <div class="ticker-item">Goddess Braids</div>
+    <div class="ticker-item">Mermaid Braids</div>
+    <div class="ticker-item">Boho Braids</div>
+    <div class="ticker-item">Fulani Braids</div>
+    <div class="ticker-item">Miracle Braids</div>
+    <div class="ticker-item">Marley Twists</div>
+    <div class="ticker-item">Island Twists</div>
+    <div class="ticker-item">Butterfly Locs</div>
+    <div class="ticker-item">Faux Locs</div>
+    <div class="ticker-item">French Curl Braids</div>
+    <div class="ticker-item">Boho French Curls</div>
+    <div class="ticker-item">Crochet Curls</div>
+    <div class="ticker-item">Jayda Wayda Braids</div>
+    <div class="ticker-item">Box Braids</div>
+    <div class="ticker-item">Goddess Braids</div>
+    <div class="ticker-item">Mermaid Braids</div>
+    <div class="ticker-item">Boho Braids</div>
+    <div class="ticker-item">Fulani Braids</div>
+    <div class="ticker-item">Miracle Braids</div>
+    <div class="ticker-item">Marley Twists</div>
+    <div class="ticker-item">Island Twists</div>
+    <div class="ticker-item">Butterfly Locs</div>
+    <div class="ticker-item">Faux Locs</div>
+    <div class="ticker-item">French Curl Braids</div>
+    <div class="ticker-item">Boho French Curls</div>
+    <div class="ticker-item">Crochet Curls</div>
+    <div class="ticker-item">Jayda Wayda Braids</div>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="fade-up vis">
+    <div class="sec-tag">Price List</div>
+    <h2 class="sec-title">Our <em>Services</em></h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="price-group fade-up vis">
+    <h3 class="price-cat">Braids</h3>
+    <div class="price-rows">
+      <div class="price-row"><span>Box Braids</span><span class="dots"></span><span class="amt">70K</span></div>
+      <div class="price-row"><span>Goddess Braids</span><span class="dots"></span><span class="amt">95K</span></div>
+      <div class="price-row"><span>Mermaid Braids</span><span class="dots"></span><span class="amt">60K</span></div>
+      <div class="price-row"><span>Boho Braids</span><span class="dots"></span><span class="amt">95K</span></div>
+      <div class="price-row"><span>Fulani Braids</span><span class="dots"></span><span class="amt">80K</span></div>
+      <div class="price-row"><span>Miracle Braids</span><span class="dots"></span><span class="amt">75K</span></div>
+    </div>
+  </div>
+
+  <div class="price-group fade-up vis">
+    <h3 class="price-cat">Twists</h3>
+    <div class="price-rows">
+      <div class="price-row"><span>Marley Twists</span><span class="dots"></span><span class="amt">75K</span></div>
+      <div class="price-row"><span>Island Twists</span><span class="dots"></span><span class="amt">80K</span></div>
+      <div class="price-row"><span>Mini Twists with Extensions</span><span class="dots"></span><span class="amt">65K</span></div>
+      <div class="price-row"><span>Coco Twists</span><span class="dots"></span><span class="amt">75K</span></div>
+    </div>
+  </div>
+
+  <div class="price-group fade-up vis">
+    <h3 class="price-cat">Cornrows &amp; Locs</h3>
+    <div class="price-rows">
+      <div class="price-row"><span>Stitch Cornrows</span><span class="dots"></span><span class="amt">50K</span></div>
+      <div class="price-row"><span>Alicia Keys Cornrows</span><span class="dots"></span><span class="amt">55K</span></div>
+      <div class="price-row"><span>Boho Cornrows</span><span class="dots"></span><span class="amt">60K</span></div>
+      <div class="price-row"><span>Butterfly Locs</span><span class="dots"></span><span class="amt">100K</span></div>
+      <div class="price-row"><span>Faux Locs</span><span class="dots"></span><span class="amt">110K</span></div>
+    </div>
+  </div>
+
+  <div class="price-group fade-up vis">
+    <h3 class="price-cat">Curls</h3>
+    <div class="price-rows">
+      <div class="price-row"><span>French Curl Braids</span><span class="dots"></span><span class="amt">95K</span></div>
+      <div class="price-row"><span>Boho French Curls</span><span class="dots"></span><span class="amt">100K</span></div>
+      <div class="price-row"><span>Crochet Curls</span><span class="dots"></span><span class="amt">80K</span></div>
+      <div class="price-row"><span>Jayda Wayda Braids</span><span class="dots"></span><span class="amt">85K</span></div>
+    </div>
+  </div>
+
+  <p class="price-note fade-up vis">All prices in Ugandan Shillings (UGX). Final pricing may vary slightly based on hair length and density — confirm with us when booking.</p>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery">
+  <div class="gallery-header fade-up vis">
+    <div>
+      <div class="sec-tag">Our Work</div>
+      <h2 class="sec-title" style="color:#FAF7F2;">Style <em>Gallery</em></h2>
+      <div class="divider"></div>
+      <p class="gallery-intro">Every head of hair we touch is a canvas. Real clients, real results.</p>
+    </div>
+  </div>
+
+  <!-- 3 big featured photos -->
+  <div class="feat-row fade-up vis">
+    <div class="feat-cell feat-large">
+      <img src="images/feat-1.jpg" alt="Featured Braided Elegancy style"/>
+      <div class="feat-overlay"></div>
+    </div>
+    <div class="feat-col">
+      <div class="feat-cell feat-half">
+        <img src="images/feat-2.jpg" alt="Featured Braided Elegancy style"/>
+        <div class="feat-overlay"></div>
+      </div>
+      <div class="feat-cell feat-half">
+        <img src="images/feat-3.jpg" alt="Featured Braided Elegancy style"/>
+        <div class="feat-overlay"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 13-photo grid -->
+  <div class="gallery-grid fade-up vis" id="galleryGrid">
+    <div class="g-cell"><img src="images/g-01.jpg" alt="Braided Elegancy style"/><div class="g-overlay"><span>&#10010;</span></div></div>
+    <div class="g-cell"><img src="images/g-02.jpg" alt="Braided Elegancy style"/><div class="g-overlay"><span>&#10010;</span></div></div>
+    <div class="g-cell"><img src="images/g-03.jpg" alt="Braided Elegancy style"/><div class="g-overlay"><span>&#10010;</span></div></div>
+    <div class="g-cell"><img src="images/g-04.jpg" alt="Braided Elegancy style"/><div class="g-overlay"><span>&#10010;</span></div></div>
+    <div class="g-cell"><img src="images/g-05.jpg" alt="Braided Elegancy style"/><div class="g-overlay"><span>&#10010;</span></div></div>
+    <div class="g-cell"><img src="images/g-06.jpg" alt="Braided Elegancy style"/><div class="g-overlay"><span>&#10010;</span></div></div>
+    <div class="g-cell"><img src="images/g-07.jpg" alt="Braided Elegancy style"/><div class="g-overlay"><span>&#10010;</span></div></div>
+    <div class="g-cell"><img src="images/g-08.jpg" alt="Braided Elegancy style"/><div class="g-overlay"><span>&#10010;</span></div></div>
+    <div class="g-cell"><img src="images/g-09.jpg" alt="Braided Elegancy style"/><div class="g-overlay"><span>&#10010;</span></div></div>
+    <div class="g-cell"><img src="images/g-10.jpg" alt="Braided Elegancy style"/><div class="g-overlay"><span>&#10010;</span></div></div>
+    <div class="g-cell"><img src="images/g-11.jpg" alt="Braided Elegancy style"/><div class="g-overlay"><span>&#10010;</span></div></div>
+    <div class="g-cell"><img src="images/g-12.jpg" alt="Braided Elegancy style"/><div class="g-overlay"><span>&#10010;</span></div></div>
+    <div class="g-cell"><img src="images/g-13.jpg" alt="Braided Elegancy style"/><div class="g-overlay"><span>&#10010;</span></div></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT / CEO ===== -->
+<section id="about">
+  <div class="about-left fade-up vis">
+    <div class="ceo-frame" id="ceoFrame">
+      
+      
+      <img src="images/ceo-photo.jpg" alt="Patience Kirabo N. - Founder, Braided Elegancy">
+    </div>
+    <div class="acc1"></div>
+    <div class="acc2"></div>
+    <div class="ceo-name">Patience Kirabo N.</div>
+    <div class="ceo-role">Founder · Braided Elegancy</div>
+  </div>
+  <div class="fade-up vis">
+    <div class="sec-tag">Our Story</div>
+    <h2 class="sec-title">Where Beauty Meets <em>Confidence</em></h2>
+    <div class="divider"></div>
+    <p class="about-body">
+      Braided Elegancy was born from a simple passion — a love for creating beautiful hairstyles and helping women feel confident in their own beauty. What started with styling family members and friends soon grew into something much bigger: a dream to create a brand that combines creativity, elegance, and exceptional care at the comfort of your home.<br><br>
+      We understand that hair is more than just a style. It is a reflection of personality, confidence, and self-expression. That is why we are committed to providing high-quality braided styles that not only look beautiful but also promote healthy hair habits and comfort.<br><br>
+      At Braided Elegancy, we believe that beauty is not just about how you look — it is about how you feel. And nothing brings us more joy than seeing our clients leave with renewed confidence and a smile.
+    </p>
+    <div class="about-sig">Patience K.</div>
+    <br>
+    <a href="#contact" class="btn-gold" style="margin-top:1.5rem;display:inline-block;">Book a Consultation</a>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials">
+  <div class="fade-up">
+    <div class="sec-tag">Client Love</div>
+    <h2 class="sec-title">What They <em>Say</em></h2>
+    <div class="divider"></div>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card fade-up">
+      <div class="testi-q">"</div>
+      <p class="testi-txt">I have always had issues with braiding hair, it would always be very itchy so I was always limited to one hairstyle. But since I started my journey with Braided Elegancy that changed — my hair is treated before use and I can now do various hairstyles without worrying about my comfort.</p>
+      <div class="testi-author">
+        <div class="testi-av">P</div>
+        <div><div class="testi-nm">Pamela Y.</div><div class="testi-stars">★★★★★</div></div>
+      </div>
+    </div>
+    <div class="testi-card fade-up">
+      <div class="testi-q">"</div>
+      <p class="testi-txt">My fear for braiding hair has always been about the painful scalp after. My first time experiencing a beautiful hairstyle with no scalp pain was with Braided Elegancy. And I have never been happier.</p>
+      <div class="testi-author">
+        <div class="testi-av">M</div>
+        <div><div class="testi-nm">Mbabazi J.</div><div class="testi-stars">★★★★★</div></div>
+      </div>
+    </div>
+    <div class="testi-card fade-up">
+      <div class="testi-q">"</div>
+      <p class="testi-txt">Going to salons and sitting for long hours was never my cup of tea, I hated it so much. My hair maintenance days changed from being stressful to comfortable — being a mother of two, having my hair braided at home is the biggest flex.</p>
+      <div class="testi-author">
+        <div class="testi-av">S</div>
+        <div><div class="testi-nm">Sharon K.</div><div class="testi-stars">★★★★★</div></div>
+      </div>
+    </div>
+    <div class="testi-card fade-up">
+      <div class="testi-q">"</div>
+      <p class="testi-txt">I was always scared of trying hairstyles out of my comfort zone because of maintenance, but you guys made it so easy for me to unleash the beauty I didn't know I had. I now plait any hairstyle without worrying about how to maintain it.</p>
+      <div class="testi-author">
+        <div class="testi-av">E</div>
+        <div><div class="testi-nm">Edwig A.</div><div class="testi-stars">★★★★★</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="fade-up">
+    <div class="sec-tag">Reach Us</div>
+    <h2 class="sec-title">Get in <em>Touch</em></h2>
+    <div class="divider"></div>
+    <div class="c-info-item">
+      <div class="c-ico">📍</div>
+      <div>
+        <div class="c-lbl">Location</div>
+        <div class="c-val">Kibuli Mbogo Road, Kampala, Uganda</div>
+      </div>
+    </div>
+    <div class="c-info-item">
+      <div class="c-ico">📞</div>
+      <div>
+        <div class="c-lbl">Phone</div>
+        <div class="c-val">0743 832 654</div>
+      </div>
+    </div>
+    <div class="c-info-item">
+      <div class="c-ico">💬</div>
+      <div>
+        <div class="c-lbl">WhatsApp</div>
+        <div class="c-val">0768 611 640</div>
+      </div>
+    </div>
+    <div class="c-info-item">
+      <div class="c-ico">🕐</div>
+      <div>
+        <div class="c-lbl">Working Hours</div>
+        <div class="c-val">Mon – Sun: 8:00 AM – 8:00 PM<br><strong style="color:var(--gold);">By appointment only — we don't do walk-ins at the moment.</strong></div>
+      </div>
+    </div>
+    <div class="social-row">
+      <a href="#" class="soc-btn" title="Instagram">Ig</a>
+      <a href="#" class="soc-btn" title="Facebook">Fb</a>
+      <a href="#" class="soc-btn" title="TikTok">Tt</a>
+      <a href="#" class="soc-btn" title="WhatsApp">Wa</a>
+    </div>
+  </div>
+
+  <div class="fade-up">
+    <form id="contactForm" onsubmit="handleForm(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name *</label>
+          <input type="text" id="fName" placeholder="Jane" required="">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" id="lName" placeholder="Namukasa">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="cEmail" placeholder="jane@example.com">
+      </div>
+      <div class="form-group">
+        <label>Phone Number *</label>
+        <input type="tel" id="cPhone" placeholder="+256 700 000 000" required="">
+      </div>
+      <div class="form-group">
+        <label>Service of Interest</label>
+        <select id="cService">
+          <option value="" disabled="" selected="">— Choose a service —</option>
+          <optgroup label="Braids">
+            <option>Box Braids</option>
+            <option>Goddess Braids</option>
+            <option>Mermaid Braids</option>
+            <option>Boho Braids</option>
+            <option>Fulani Braids</option>
+            <option>Miracle Braids</option>
+          </optgroup>
+          <optgroup label="Twists">
+            <option>Marley Twists</option>
+            <option>Island Twists</option>
+            <option>Mini Twists with Extensions</option>
+            <option>Coco Twists</option>
+          </optgroup>
+          <optgroup label="Cornrows & Locs">
+            <option>Stitch Cornrows</option>
+            <option>Alicia Keys Cornrows</option>
+            <option>Boho Cornrows</option>
+            <option>Butterfly Locs</option>
+            <option>Faux Locs</option>
+          </optgroup>
+          <optgroup label="Curls">
+            <option>French Curl Braids</option>
+            <option>Boho French Curls</option>
+            <option>Crochet Curls</option>
+            <option>Jayda Wayda Braids</option>
+          </optgroup>
+          <option>Other / Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Preferred Date</label>
+        <input type="date" id="cDate">
+      </div>
+      <div class="form-group">
+        <label>Your Message</label>
+        <textarea id="cMessage" placeholder="Describe the look you have in mind, your hair type, or any questions you have..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn">💬 Send via WhatsApp →</button>
+      <div class="form-ok" id="formOk">✓ Opening WhatsApp… if it doesn't open, tap the button again.</div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">Braided Elegancy</div>
+      <p class="footer-tag">Where beauty meets confidence. Premium braided hairstyles delivered at the comfort of your home.</p>
+    </div>
+    <div>
+      <div class="f-col-title">Quick Links</div>
+      <ul class="f-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-title">Services</div>
+      <ul class="f-links">
+        <li><a href="#services">Braids</a></li>
+        <li><a href="#services">Twists</a></li>
+        <li><a href="#services">Cornrows &amp; Locs</a></li>
+        <li><a href="#services">Curls</a></li>
+        <li><a href="#contact">Book Appointment</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-title">Opening Hours</div>
+      <div class="f-hours">
+        Mon – Sun<br>8:00 AM – 8:00 PM<br><br>
+        <span style="color:var(--gold);">By appointment only</span><br>No walk-ins
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 <span>Braided Elegancy</span>. All rights reserved.</div>
+    <div class="footer-copy">Made with ♥ in Kampala, Uganda</div>
+  </div>
+</footer>
+
+<script>
+// ── Scroll fade-in ──
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('vis'); });
+}, {threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+// ── Mobile menu ──
+function toggleMenu(){
+  var m = document.getElementById('mobileMenu');
+  m.style.display = m.style.display === 'block' ? 'none' : 'block';
+}
+function closeMenu(){ document.getElementById('mobileMenu').style.display = 'none'; }
+
+// ── Gallery upload ──
+function handleGalleryUpload(e){
+  Array.from(e.target.files).forEach(file => {
+    if(!file.type.startsWith('image/')) return;
+    var r = new FileReader();
+    r.onload = function(ev){
+      var wrap = document.createElement('div');
+      wrap.className = 'prev-item';
+      var img = document.createElement('img');
+      img.src = ev.target.result;
+      var btn = document.createElement('button');
+      btn.className = 'prev-rm';
+      btn.textContent = '✕';
+      btn.onclick = function(){ wrap.remove(); };
+      wrap.appendChild(img);
+      wrap.appendChild(btn);
+      document.getElementById('uploadPrev').appendChild(wrap);
+    };
+    r.readAsDataURL(file);
+  });
+}
+
+// ── CEO photo ──
+function handleCEOPhoto(e){
+  var file = e.target.files[0];
+  if(!file || !file.type.startsWith('image/')) return;
+  var r = new FileReader();
+  r.onload = function(ev){
+    var frame = document.getElementById('ceoFrame');
+    var img = document.createElement('img');
+    img.src = ev.target.result;
+    // remove placeholder elements but keep the upload button
+    Array.from(frame.children).forEach(function(child){
+      if(!child.classList.contains('ceo-upload')) child.remove();
+    });
+    frame.insertBefore(img, frame.querySelector('.ceo-upload'));
+  };
+  r.readAsDataURL(file);
+}
+
+// ── Contact form -> WhatsApp ──
+var WHATSAPP_NUMBER = '256768611640';
+
+function handleForm(e){
+  e.preventDefault();
+
+  var fName = document.getElementById('fName').value.trim();
+  var lName = document.getElementById('lName').value.trim();
+  var email = document.getElementById('cEmail').value.trim();
+  var phone = document.getElementById('cPhone').value.trim();
+  var service = document.getElementById('cService').value;
+  var date = document.getElementById('cDate').value;
+  var message = document.getElementById('cMessage').value.trim();
+
+  var lines = [];
+  lines.push('Hello Braided Elegancy! I would like to book an appointment.');
+  lines.push('');
+  lines.push('Name: ' + fName + (lName ? ' ' + lName : ''));
+  lines.push('Phone: ' + phone);
+  if(email) lines.push('Email: ' + email);
+  if(service) lines.push('Service: ' + service);
+  if(date) lines.push('Preferred date: ' + date);
+  if(message) lines.push('Message: ' + message);
+
+  var text = encodeURIComponent(lines.join('\n'));
+  var waUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + text;
+
+  var ok = document.getElementById('formOk');
+  ok.style.display = 'block';
+
+  window.open(waUrl, '_blank');
+
+  e.target.reset();
+  setTimeout(function(){ ok.style.display = 'none'; }, 6000);
+}
+
+// ── Active nav highlight ──
+var sections = document.querySelectorAll('section[id]');
+var navAs = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', function(){
+  var cur = '';
+  sections.forEach(function(s){
+    if(window.scrollY >= s.offsetTop - 90) cur = s.id;
+  });
+  navAs.forEach(function(a){
+    a.style.color = a.getAttribute('href') === '#'+cur ? '#C9A84C' : '';
+  });
+});
+</script>
+
+
+</body></html>
